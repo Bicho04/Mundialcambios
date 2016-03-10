@@ -1,0 +1,98 @@
+.cuadro
+  // background-color: purple
+  max-width: 1024px
+  width: 90%
+  min-height: 200px
+  margin: 0 auto
+
+section, header, hr.white
+  position: relative
+  margin: 0
+  padding: 0
+  background: 
+    color: transparent
+    size: 1000px
+    position: bottom center
+    repeat: no-repeat
+  @include media($small-screen) 
+    background-size: 1024px
+  @include media($large-screen) 
+    background-size: 100% 
+
+$s-header: 3em
+$s-cambios: 12em
+$s-mundialCambios: 12em
+$s-clima: 12em
+$s-white: 5em
+$s-horarios: 12em
+$s-noticias: 5em
+
+
+header.header
+  padding-bottom: $s-header
+  z-index: 7
+  background: 
+    image: url('../img/bg/bg-header.png')
+    position: bottom left
+  // BORRAR ######################################3
+  .cuadro
+    min-height: auto
+    background-color: none
+  // BORRAR ######################################3
+section.cambios
+  padding-bottom: $s-cambios
+  padding-top: $s-header
+  margin-top: -$s-header
+  z-index: 6
+  background: 
+    image: url('../img/bg/bg-cambios.png')
+section.mundialCambios
+  padding-bottom: $s-mundialCambios
+  padding-top: $s-cambios
+  margin-top: -$s-cambios
+  z-index: 5
+  background: 
+    image: url('../img/bg/bg-loro.png')
+section.clima
+  padding-bottom: $s-clima
+  padding-top: $s-mundialCambios
+  margin-top: -$s-mundialCambios
+  z-index: 4
+  background: 
+    image: url('../img/bg/bg-clima.png')
+hr.white
+  border: none
+  margin: 0
+  padding: 0
+  padding-bottom: $s-white
+  margin-top: -$s-white + 2em
+  z-index: 3
+  background: 
+    image: url('../img/bg/bg-withe.png')
+section.horarios
+  padding-bottom: $s-horarios
+  padding-top: $s-white
+  margin-top: -$s-white
+  z-index: 2
+  background: 
+    image: url('../img/bg/bg-horaMundial.png')
+section.noticias
+  padding-bottom: $s-noticias
+  padding-top: $s-horarios
+  margin-top: -$s-horarios
+  z-index: 1
+  background: 
+    image: url('../img/bg/bg-withe.png')
+footer.footer
+  padding-top: $s-noticias
+  margin-top: -$s-noticias
+  z-index: 0
+  background: 
+    color: $color-primary
+
+
+
+.creators p
+  margin: 0
+  line-height: 2em
+

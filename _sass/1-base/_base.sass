@@ -1,0 +1,89 @@
+//	Typography
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 300
+  font-family: $font-family
+  color: $color-text
+  font-weight: 600
+
+h1
+  font-size: 2.2rem
+
+h2
+  font-size: 1.7rem
+
+h3
+  font-size: 1.2rem
+
+h4
+  font-size: 1rem
+  color: lighten($color-text,30)
+  font-weight: 400
+p
+  margin: 0 0 1em 0
+  line-height: 1.6
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+hr
+  border: solid #ddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+  width: 100%
+  flex-shrink: 100%
+
+
+// Links
+
+a
+  color: $color-link
+  text-decoration: none
+  outline: 0    
+
+a:hover, a:focus
+  color: lighten($color-link, 20%)
+  text-decoration: underline
+
+
+
+// Selection colors (easy to forget)
+
+::selection
+  background: $color-selection
+  color: white
+
+::-moz-selection
+  background: $color-selection
+  color: white
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: $color-selection
+  color: white
+
+
+
+// Basic Styles
+
+html,
+body
+  min-height: 100vh
+
+body
+  font-size: 16px
+  line-height: 1.1
+  font-family: $font-family
+  color: $color-text
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%

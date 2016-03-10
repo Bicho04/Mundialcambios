@@ -1,0 +1,116 @@
+.moneda{
+	display:inline-block;
+	width:30px;
+	height:20px;
+	background-image:url('../img/cotiz-icons.png');
+	// background-repeat: no-repeat;
+	background-size: 105px 555px;
+	margin:0 6px;
+	-webkit-transition:.3s ease-in-out;
+	-moz-transition:.3s ease-in-out;
+	transition:.3s 	ease-in-out;
+	-webkit-box-shadow:0 0 2px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 0 2px rgba(0,0,0,0.3);
+	box-shadow:0 0 2px rgba(0,0,0,0.3)
+}
+.moneda.dolarUs{
+	background-position:0 0
+}
+.moneda.pesoAr{
+	background-position:0 -20px
+}
+.moneda.real{
+	background-position:0 -40px
+}
+.moneda.euro{
+	background-position:0 -60px
+}
+.moneda.pesoUr{
+	background-position:0 -80px
+}
+.moneda.pesoCh{
+	background-position:0 -100px
+}
+.moneda.dolarCa{
+	background-position:0 -120px
+}
+.moneda.libra{
+	background-position:0 -140px
+}
+.moneda.franco{
+	background-position:0 -160px
+}
+.moneda.yen{
+	background-position:0 -180px
+}
+.moneda.pesoMx{
+	background-position:0 -200px
+}
+.moneda.boliviano{
+	background-position:0 -220px
+}
+.moneda.coronaNor{
+	background-position:0 -240px
+}
+.moneda.pesoCo{
+	background-position:0 -260px
+}
+.moneda.dolarAu{
+	background-position:0 -280px
+}
+.moneda.coronaDan{
+	background-position:0 -300px
+}
+.moneda.coronaSue{
+	background-position:0 -320px
+}
+.moneda.ranSud{
+	background-position:0 -340px
+}
+.moneda.yuan{
+	background-position:0 -360px
+}
+.moneda.usTw{
+	background-position:0 -380px
+}
+.moneda.usSg{
+	background-position:0 -400px
+}
+.moneda.rublo{
+	background-position:0 -420px
+}
+.moneda.shekel{
+	background-position:0 -440px
+}
+.moneda.dinar{
+	background-position:0 -460px
+}
+.moneda.guarani{
+	background-position:0 -480px
+}
+.moneda.pen{
+	background-position:0 -500px
+}
+.moneda.arbitraje{
+	width:27px;
+	height:8px
+}
+.estado{
+	display:inline-block;
+	width:25px;
+	height:25px;
+	background-image:url('../images/cotiz-icons.png');
+	-webkit-transform:scale(.5);
+	-moz-transform:scale(.5);
+	transform:scale(.5);
+	margin:-8px
+}
+.estado.suba{
+	background-position:-66px -7px
+}
+.estado.baja{
+	background-position:-66px -50px
+}
+.estado.igual{
+	background-position:-66px -90px
+}

@@ -1,0 +1,39 @@
+mixin img(carpeta, nombre, extencion)
+	img(src="assets/img/#{carpeta}#{nombre}.#{extencion}", alt="Mundial Cambios - #{nombre}")
+
+mixin local(local, calle, telefono, ubicacion)
+	.local
+		h4 #{local}
+		p #{calle}
+		p #{telefono}
+		p.icon-compas: a(href="#{ubicacion}") Ubicación
+
+mixin exchange(ico,moneda,compra,venta)
+	tr
+		td.pais
+			i(class="moneda #{ico}")
+			| #{moneda}
+		td.compra #{compra}
+		td.venta #{venta}
+
+mixin arb-exchange(ico1,ico2,moneda,compra,venta)
+	tr
+		td.pais
+			i(class="moneda #{ico1}")
+			i(class="moneda #{ico2}")
+			| #{moneda}
+		td.compra #{compra}
+		td.venta #{venta}
+
+mixin clima(dia,ico,max,min,detalle)
+	.clima-dia
+		p.dia #{dia}
+		span(class="icon-#{ico}") 
+		p.max #{max}°
+		p.min #{min}°
+		p.modo #{detalle}
+
+mixin hora(code,pais)
+	.hora
+		iframe(src="http://free.timeanddate.com/clock/i53q0bwx/n#{code}/szw80/szh80/hoc000/hbw10/cf100/hgr0/hcw2/fav0/fiv0/mqc000/mqs3/mql25/mqw2/mqd96/mhc000/mhs3/mhl15/mhw2/mhd96/mmc000/mms3/mml5/mmw2/mmd96/hhs2/hhw8/hms2/hmw8/hmr4/hss3/hsl90" frameborder="0" width="80" height="80")
+		h3 #{pais}

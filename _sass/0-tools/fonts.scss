@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?mfe6mg');
+    src:    url('../fonts/icomoon.eot?mfe6mg#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?mfe6mg') format('truetype'),
+        url('../fonts/icomoon.woff?mfe6mg') format('woff'),
+        url('../fonts/icomoon.svg?mfe6mg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clock:before {
+    content: "\e8b5";
+}
+.icon-nosotros:before {
+    content: "\e227";
+}
+.icon-edificio:before {
+    content: "\e7ee";
+}
+.icon-contactos:before {
+    content: "\e0cd";
+}
+.icon-home:before {
+    content: "\e906";
+}
+.icon-sun:before {
+    content: "\e900";
+}
+.icon-cloudy:before {
+    content: "\e901";
+}
+.icon-rainy:before {
+    content: "\e902";
+}
+.icon-lightning:before {
+    content: "\e903";
+}
+.icon-compas:before {
+    content: "\e904";
+}
+.icon-Celsius:before {
+    content: "\e905";
+}
+.icon-noticias:before {
+    content: "\e907";
+}
+.icon-nosotros2:before {
+    content: "\e908";
+}
+
+

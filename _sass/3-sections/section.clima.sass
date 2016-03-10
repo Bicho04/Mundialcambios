@@ -1,0 +1,39 @@
+section.clima .cuadro
+	background: transparentize($color-claro,0.2)
+	padding: 5em 3em
+	text-align: center
+	h2
+		text-transform: capitalize
+		font-size: 2.5em
+		width: 60%
+		font-weight: 300
+		border-bottom: 1px solid black
+		margin: 0 auto
+	p.clima-tiempo
+		font-size: 8em
+		vertical-align: middle
+		margin: 0
+		display: inline-block
+		i 
+			font-size: 0.8em
+	.clima-dia
+		display: inline-block
+		vertical-align: middle
+		background: transparentize($color-secundary,0.4)
+		width: 80px
+		margin-top: 1em
+		font-weight: 600
+		padding: 0.3em 0.2em
+		p 
+			margin: 0
+			line-height: 1em
+			&.max
+				font-size: 1.5rem
+			&.min
+				font-size: 0.9rem
+			&.modo
+				line-height: 2em
+				font-size: 0.8rem
+		span
+			font-size: 1.8rem
+			line-height: 2em
