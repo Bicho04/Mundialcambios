@@ -1,5 +1,5 @@
 section.noticias .cuadro
-	background: transparentize($color-claro,0.2)
+	// background: transparentize($color-claro,0.2)
 	padding: 5em 3em
 	text-align: center
 	h2
@@ -12,13 +12,14 @@ section.noticias .cuadro
 	h3
 		color: #8DA5BF
 		font-weight: 300
-		font-size: 1.5em
+		font-size: 1.7em
 	.bloque
-		display: inline-block
 		vertical-align: top
-		width: 45%
-		margin: 2%
 		text-align: left
+		@include media($middle-screen)
+			margin: 2%
+			width: 45%
+			display: inline-block
 		a 
 			color: $color-text
 			font-weight: 300
@@ -27,3 +28,9 @@ section.noticias .cuadro
 			font-size: 1.2em
 			&:before
 				content:'> '
+				font-size: 0.8em
+				position: relative
+				top: -2px
+			&:hover
+				text-decoration: none
+				color: $color-primary

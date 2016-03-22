@@ -1,9 +1,61 @@
 footer.footer
-  section.locales.cuadro .locales
-    display: flex
-    justify-content: space-between
-    flex-wrap: wrap
-    align-items: flex-start
+  section.form.cuadro
+    color: #fff
+    text-align: center
+    margin: 0 auto 3em
+    padding-bottom: 3em
+    border-bottom: 1px solid red
+    h2
+      color: #fff
+      font-weight: 300
+      text-transform: capitalize
+    p 
+      font-weight: 300
+      margin: 0
+      line-height: 1em
+    form
+      max-width: 800px
+      margin: 2em auto
+      .label
+        @include justify-content(center)
+        @include align-items(center)
+        @include display(flex)
+        margin-bottom: 0.5em
+        label
+          text-align: right
+          width: 150px
+          margin-right: 1em
+        input,textarea
+          padding: 0.2em
+          width: 400px
+          margin: 0 
+          border: 1px solid red
+          background: transparent
+        &.mensaje
+          @include align-items(flex-start)
+          textarea
+            height: 120px
+        .button
+          text-align: left
+          width: 400px
+          margin: 2em auto 1em
+          a 
+            border: 1px solid red 
+            padding: 0.5em 1em
+            background: transparent
+            color: #fff
+            &:hover
+              background: red
+              text-decoration: none
+
+
+
+  article.locales.cuadro .locales
+    padding-top: 0
+    @include display(flex)
+    @include justify-content(space-between)
+    @include flex-wrap(wrap)
+    @include align-items(flex-start)
     .local
       width: 250px 
       margin: 1em 2em

@@ -6,167 +6,17 @@ block title
 	meta(name='description', content='Mundial cambios - divisas')
 
 block body
-	header.header
-		.cuadro
-			figure.header-logo: +img('','Logo-MundialCambios','png')
-			nav.header-menu
-				ul.menu
-					li: a(href="#"): span.icon-home
-					li: a(href="#"): span.icon-nosotros
-					li: a(href="#"): span.icon-edificio
-					li: a(href="#"): span.icon-sun
-					li: a(href="#"): span.icon-clock
-					li: a(href="#"): span.icon-noticias
-					li: a(href="#"): span.icon-contactos
-
-	section.cambios
-		.cuadro
-			section.cotiz.cambios-delDia
-				h2 Cambios Del dia
-				table.cotiz-tabla
-					thead
-						tr
-							td.moneda Moneda
-							td.compra Compra
-							td.venta Venta
-					tbody
-						+exchange('dolarUs','Dolar US','5.640','5.690')
-						+exchange('real','Real','1.480','1.525')
-						+exchange('pesoAr','Peso Argentino','340','360')
-						+exchange('pesoCh','Peso Chileno','5','10')
-						+exchange('pesoUr','Peso Uruguayo','150','220')
-						+exchange('dolarCa','Dolar Canadiense','3.650','4.280')
-						+exchange('euro','Euro','5.920','6.260')
-						+exchange('libra','Libra','7.520','8.390')
-						+exchange('franco','Franco Suizo','4.680','5.730')
-						+exchange('yen','Yen Japones','43','51')
-
-			section.cotiz.cambios-Contizacion
-				h2 Cotizacion de arbitraje
-				table.cotiz-tabla
-					thead
-						tr
-							td.moneda Moneda
-							td.compra Compra
-							td.venta Venta
-					tbody
-						+arb-exchange('dolarUs','real','Dolar x Real','3,750','3,820')
-						+arb-exchange('dolarUs','pesoAr','Dolar x Peso Arg.','15,800','16,400')
-						+arb-exchange('dolarUs','dolarCa','Dolar x Dolar Canad.','1,330','1,540')
-						+arb-exchange('dolarUs','franco','Dolar x Franco Suizo','1,000','1,200')
-						+arb-exchange('dolarUs','yen','Dolar x Yen','112,000','129,000')
-						+arb-exchange('euro','dolarUs','Euro x Dolar','1,050','1,100')
-						+arb-exchange('libra','dolarUs','Libra Esterlina x Dolar','1,330','1,460')
-						+arb-exchange('euro','real','Euro x Real','3,930','4,200')
-						+arb-exchange('real','pesoAr','Real x Peso Arg.','4,130','4,370')
-						+arb-exchange('libra','real','Libra esterlina x Real','4,980','5,580')
-			section.cotiz.cambios-conversor
-				h2 Conversor de Divisas
-
-	section.mundialCambios
-		.cuadro
-			p Mundial Cambios tiene algo lindo que mostrar; una tierra de costumbres sencillas, como cantaba Mario Ortíz Mayans, que siempre agradan porque no tienen complicación, con paisajes que cubren de paz el alma y gente que trabaja con pasión para ancanzar sus sueños. Te mostramos Paraguay.
-			+img('','loro','png')
+	include _sections/cambios
+	include _sections/mundialcambios
+	include _sections/clima
+	include _sections/horarios
+	include _sections/noticias
+	include _sections/footer
 	
-	section.clima
-		.cuadro
-			h2 clima
-			p.clima-tiempo
-				i.icon-sun
-				|37°
-			+clima('Viernes','rainy','22','15','lluvioso')
-			+clima('Sabado','rainy','22','15','lluvioso')
-			+clima('Domingo','rainy','22','15','lluvioso')
-			+clima('Lunes','rainy','22','15','lluvioso')
-			+clima('Martes','rainy','22','15','lluvioso')
 	
-	hr.white
-	section.horarios
-		.cuadro
-			h2 Horario Mundial
-			.horas
-				+hora('51','Argentina')
-				+hora('233','Brasil')
-				+hora('232','Chile')
-				+hora('190','Ecuador')
-				+hora('179','EEUU')
-				+hora('136','Inglaterra')
-				+hora('141','España')
-				+hora('41','Colombia')
 	
-	section.noticias
-		.cuadro.noticias
-			h2 noticias
-			.bloque
-				h3 internacionales
-				a(href="#") ¿Qué hará China para abrir su mercado de capitales?
-				a(href="#") Desmienten medidas de corte de luz en cines y teatros en Venezuela
-				a(href="#") Las tres cosas que podrían descarrilar a EE.UU. según Yellen
-				a(href="#") Perú presenta guía de negocios e inversión en gas y petróleo
-				
-			.bloque
-				h3 Del Agro
-				a(href="#") Gramogen participará en el IPPE 2016
-				a(href="#") La Xilanasa de BRI recibe Aprobación por las Entidades Regulatorias de Brasil y Perú
-				a(href="#") Producción de pollo alcanzó récord con 673 mlls. de unidades en el 2015
-				a(href="#") En abril definirán franja de precios para productos que sustentan el sector pecuario
 	
-	footer.footer
-		section.form.cuadro
-			h2 contáctenos
-			p Puede enviar un mensaje usando el siguiente formulario de contacto. 
-			p Por favor llene los campos requeridos.
-			form
-				.label
-					label Nombre y apellido
-					input(type="text")
-				.label
-					label E-mail
-					input(type="email")
-				.label
-					label Teléfono
-					input(type="text")
-				.label
-					label Mensaje
-					textarea
-		section.locales.cuadro
-			.locales
-				+local(
-					'Casa Matriz',
-					'Avda. Curupyty c/ Adrián Jara. Edif.Globo P.B.',
-					'Tel. +595 61 509570',
-					'#'
-					)
-				+local(
-					'Sucursal Saltos',
-					'Avda. Paraguay c/ Bernardino Caballero.',
-					'Tel. +595 46 263 030',
-					'#'
-					)
-				+local(
-					'Sucursal Vendome',
-					'Avda. Itá Ybaté c/Adrián jara. Shopp. Vendome. Local 109',
-					'Tel. +595 61 511 630',
-					'#'
-					)
-				+local(
-					'Sucursal KM4 Super Carrereta',
-					'Sentido Pdte.Franco, a 100 mts. de la rotonda',
-					'Tel. +595 61 571 070',
-					'#'
-					)
-				+local(
-					'Sucursal Katueté',
-					'Ruta X De las Residentas.',
-					'Tel. +595 471 234 187/8',
-					'#'
-					)
-				+local(
-					'Sucursal Galeria Jebai Center',
-					'Avda. Adrian Jara',
-					'',
-					'#'
-					)
-		section.creators
-			p.fincreativo Desarrollado por:
-				a(href="#") Fincreativo
+	
+	
+	
+	

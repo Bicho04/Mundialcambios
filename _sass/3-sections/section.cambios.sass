@@ -1,24 +1,69 @@
-section.cambios .cuadro
-	display: flex
-	justify-content: space-between
-	[class^="cambios-"], [class*=" cambios-"] 
-		background: transparentize($color-claro,0.4)
-		padding: 1em
-		margin: 0.2em
-	h2
-		margin-top: 0
-		text-align: center
-		font-size: 1.6em
-	table.cotiz-tabla
-		line-height: 2.2em
-		width: 100%
-		font-size: 0.8em
-		thead 
-			display: none
-		tr 
-			border-bottom: 1px solid #fff
-		.compra,.venta
-			font-weight: 600
-			padding: 0 0.5em
-			text-align: right
+section.cambios
+	.cuadro
+		@include media($middle-screen) 
+			justify-content: space-between
+			display: flex
+		[class^="cambios-"], [class*=" cambios-"] 
+			background: transparentize($color-claro,0.4)
+			padding: 1em
+			margin: 0.2em
+		h2
+			margin-top: 0
+			text-align: center
+			text-transform: uppercase
+			font-size: 1.6em
+		table.cotiz-tabla
+			// line-height: 2.2em
+			width: 100%
+			font-size: 0.8em
+			thead 
+				display: none
+			tr 
+				border-bottom: 1px solid #fff
+			.compra,.venta
+				font-weight: 600
+				padding: 0 0.5em
+				text-align: right
+			td.pais 
+				span
+					position: relative
+					top: -0.7em
+				i
+					margin-top: 0.5em
+					margin-bottom: 0.5em
+	section.cotiz.cambios-conversor
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		h2
+			margin-bottom: 2em
+		.conversor 
+			flex: none
+			text-align: left
+			width: 90%
+		.label
+			text-align: left
+			margin: 0.5em 0
+			color: $color-primary
+			label,select,input
+				display: block
+				width: 100%
+				border: none
+			label
+				font-style: italic
+			select,input
+				height: 2em
+		.boton
+			text-align: center
+		button 
+			border: none
+			margin: 1em auto
+			background: $color-primary
+			color: $color-claro
+			padding: 0.8em 1.8em
+			text-transform: uppercase
+			font-size: 0.8em
+			&:hover
+				background: lighten($color-primary, 10)
 

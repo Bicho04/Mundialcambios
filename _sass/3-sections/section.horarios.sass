@@ -1,7 +1,10 @@
 section.horarios .cuadro
 	background: transparentize($color-claro,0.2)
-	padding: 5em 3em
 	text-align: center
+	padding: 5em 1em 3em
+	text-align: center
+	@include media($small-screen)
+		padding: 5em 3em 3em
 	h2
 		text-transform: capitalize
 		font-size: 2.5em
@@ -11,12 +14,14 @@ section.horarios .cuadro
 		margin: 0 auto 2em
 	.horas
 		display: flex
+		justify-content: center
 		flex-wrap: wrap
 		.hora
 			text-align: center
-			width: 25%
-			position relative
-			margin: 0 0 2em
+			max-width: 25%
+			min-width: 140px
+			position: relative
+			margin: 0 0 1em
 			&:after
 				position: absolute
 				top: 0
@@ -25,7 +30,15 @@ section.horarios .cuadro
 				height: 100%
 				z-index: 1
 				content:''
-
+				background: transparent
+			h3
+				font-size: 1em
+				font-weight: 400
+				padding: 0
+				margin: 0
+				position: relative
+				// top: -2.2em
 			iframe
 				width: 100%
+				margin-bottom: 0
 	
