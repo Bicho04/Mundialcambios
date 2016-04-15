@@ -28,13 +28,13 @@ header.header
     @include media($small-screen) 
       margin: 0
 
-  &:before
-    content: ''
-    position: absolute
-    bottom: 5em
-    background: #fff
-    width: 100%
-    height: 80%
+  // &:before
+  //   content: ''
+  //   position: absolute
+  //   bottom: 5em
+  //   background: #fff
+  //   width: 100%
+  //   height: 80%
 
       display: block
   nav.header-menu
@@ -44,11 +44,14 @@ header.header
       @include justify-content(space-between)
       @include align-items(center)
       width: 100%
-      margin: 0.5em 0 0
+      max-width: 290px
+      margin: 0.5em auto
       padding: 0
+      padding-bottom: 0.5em
       // background: pink
       @include media($small-screen) 
-        padding: 0 2em
+        padding: 0 2em 0.5em
+        max-width: 100%
         margin: 0
       li 
         @include media($small-screen) 
@@ -59,8 +62,9 @@ header.header
           color: $color-claro
           line-height: 1em
           padding: 0
-          font-size: 2em
+          font-size: 2.5em
           @include media($small-screen) 
+            padding: 0
             font-size: 3em
           @include media($large-screen) 
             font-size: 4em

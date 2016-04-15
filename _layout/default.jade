@@ -19,16 +19,21 @@ html(lang='Es-Py')
       Estas usando un nevegador <strong>viejo</strong>.
       Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
     <![endif]-->
-    
+
+    #preload.preload
+      img(src="assets/img/Logo-MundialCambios.png", alt="Logo Patitas blanco")
+      .loading
+
     include ../_sections/header
     .wrapper#wrapper
       block body
     
     script(type='text/javascript',src='https://code.jquery.com/jquery-2.1.4.min.js')
-    //- script(type='text/javascript',src='assets/js/jquery.mixitup.min.js')
-    //- script(type='text/javascript',src='assets/js/responsive-nav.min.js')
-    //- script(type='text/javascript',src='assets/js/owl-carousel.min.js')
-    //- script(type='text/javascript',src='assets/js/responsiveslides.min.js')
+    script
+      |$(window).load(function()
+      |{$("#preload").fadeOut('');
+      |});
+    script(type='text/javascript',src='https://maps.googleapis.com/maps/api/js')
     script(type='text/javascript',src='assets/js/waypoints.min.js')
     script(type='text/javascript',src='assets/js/xpanel.min.js')
     script(type='text/javascript',src='assets/js/functions.min.js')

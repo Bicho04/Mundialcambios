@@ -11,7 +11,7 @@ footer.footer
       text-transform: capitalize
     p 
       font-weight: 300
-      margin: 0
+      margin: 0.25em
       line-height: 1em
     form
       max-width: 800px
@@ -27,7 +27,7 @@ footer.footer
           margin-right: 1em
         input,textarea
           padding: 0.2em
-          width: 400px
+          width: 500px
           margin: 0 
           border: 1px solid red
           background: transparent
@@ -37,7 +37,7 @@ footer.footer
             height: 120px
         .button
           text-align: left
-          width: 400px
+          width: 500px
           margin: 2em auto 1em
           a 
             border: 1px solid red 
@@ -52,6 +52,7 @@ footer.footer
 
   article.locales.cuadro .locales
     padding-top: 0
+    padding-bottom: 3em
     @include display(flex)
     @include justify-content(space-between)
     @include flex-wrap(wrap)
@@ -66,16 +67,25 @@ footer.footer
         color: $color-claro
         margin: 0
         font-weight: 600
-      p 
+      p
         margin-bottom: 0
         font-weight: 300
         color: #ddd
         line-height: 1.2em
-        &.icon-compas
-          line-height: 2.5em
-          font-size: 0.8em
-      a 
+      .ubicacion
+        margin-bottom: 0
+        font-weight: 300
         color: #ddd
-        font-size: 1.3em
-        font-family: $font-family
-        margin-left: 0.5em
+        line-height: 1.2em
+        .modal
+          color: #ddd
+          font-size: 1em
+          font-family: $font-family
+        .modal-trigger 
+        .icon-compas
+          // display: inline-block
+          line-height: 2em
+          font-size: 0.8em
+          margin-right: 0.3em
+          // background: pink
+          

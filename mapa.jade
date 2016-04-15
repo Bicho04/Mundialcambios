@@ -1,0 +1,95 @@
+doctype html
+html(lang='Es-Py')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    block title
+      title Mundial Cambios
+      meta(name='description', content='Mundial Cambios')
+
+    meta(name='autor', content='Fincreativo')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700')
+    link(rel='stylesheet', href='assets/css/main.css')
+
+  body
+    <!--[if lt IE 8]>
+    p.browserupgrade.
+      Estas usando un nevegador <strong>viejo</strong>.
+      Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+    <![endif]-->
+
+
+    .modal
+      label(for="modal-casaMatriz")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-casaMatriz" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-casaMatriz") Close
+        .modal-content
+          .mapa#casaMatriz
+
+    .modal
+      label(for="modal-salto")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-salto" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-salto") Close
+        .modal-content
+          .mapa#salto
+
+    .modal
+      label(for="modal-vendome")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-vendome" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-vendome") Close
+        .modal-content
+          .mapa#vendome
+
+    .modal
+      label(for="modal-km4")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-km4" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-km4") Close
+        .modal-content
+          .mapa#km4
+
+    .modal
+      label(for="modal-katuete")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-katuete" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-katuete") Close
+        .modal-content
+          .mapa#katuete
+
+    .modal
+      label(for="modal-jebai")
+        .modal-trigger Ubicación
+      input.modal-state(id="modal-jebai" type="checkbox")
+      .modal-fade-screen 
+        .modal-inner 
+          .modal-close(for="modal-jebai") Close
+        .modal-content
+          .mapa#jebai
+
+
+
+
+    script(type='text/javascript',src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script
+      |$(window).load(function()
+      |{$("#preload").fadeOut('');
+      |});
+    script(src='https://maps.googleapis.com/maps/api/js')
+    script(type='text/javascript',src='assets/js/waypoints.min.js')
+    script(type='text/javascript',src='assets/js/xpanel.min.js')
+    script(type='text/javascript',src='assets/js/functions.min.js')

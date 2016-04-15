@@ -6,7 +6,17 @@ mixin local(local, calle, telefono, ubicacion)
 		h4 #{local}
 		p #{calle}
 		p #{telefono}
-		p.icon-compas: a(href="#{ubicacion}") Ubicación
+		.ubicacion
+			.modal
+				label(for="modal-#{ubicacion}")
+					.modal-trigger 
+						i.icon-compas
+						| Ubicación
+				input.modal-state(id="modal-#{ubicacion}" type="checkbox")
+				.modal-fade-screen 
+					.modal-inner 
+						.modal-close(for="modal-#{ubicacion}")
+						.mapa(id="#{ubicacion}")
 
 mixin exchange(ico,moneda,compra,venta)
 	tr

@@ -15,19 +15,22 @@
       Estas usando un nevegador <strong>viejo</strong>.
       Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
     </p><![endif]-->
+    <div id="preload" class="preload"><img src="assets/img/Logo-MundialCambios.png" alt="Logo Patitas blanco">
+      <div class="loading"></div>
+    </div>
     <header id="header" class="header">
       <div class="cuadro">
         <figure class="header-logo"><img src="assets/img/Logo-MundialCambios.png" alt="Mundial Cambios - Logo-MundialCambios"/>
         </figure>
         <nav class="header-menu">
           <ul class="menu">
-            <li><a href="#header"><span class="icon-mundial1"></span></a></li>
-            <li><a href="#cambios"><span class="icon-mundial2"></span></a></li>
-            <li><a href="#mundialCambios"><span class="icon-mundial3"></span></a></li>
-            <li><a href="#clima"><span class="icon-mundial4"></span></a></li>
-            <li><a href="#horarios"><span class="icon-mundial5"></span></a></li>
-            <li><a href="#noticias"><span class="icon-mundial6"></span></a></li>
-            <li><a href="#footer"><span class="icon-mundial7"></span></a></li>
+            <li><a href="#cambios" title="Inicio"><span class="icon-mundial1"></span></a></li>
+            <li><a href="#cambios" title="Cambios"><span class="icon-mundial2"></span></a></li>
+            <li><a href="#mundialCambios" title="Nosotros"><span class="icon-mundial3"></span></a></li>
+            <li><a href="#clima" title="Clima"><span class="icon-mundial4"></span></a></li>
+            <li><a href="#horarios" title="Horarios"><span class="icon-mundial5"></span></a></li>
+            <li><a href="#noticias" title="Noticias"><span class="icon-mundial6"></span></a></li>
+            <li><a href="#footer" title="Contacto"><span class="icon-mundial7"></span></a></li>
           </ul>
         </nav>
       </div>
@@ -197,7 +200,7 @@
       </section>
       <section id="mundialCambios" class="mundialCambios">
         <div class="cuadro">
-          <p>Mundial Cambios tiene algo lindo que mostrar; una tierra de costumbres sencillas, como cantaba Mario Ortíz Mayans, que siempre agradan porque no tienen complicación, con paisajes que cubren de paz el alma y gente que trabaja con pasión para ancanzar sus sueños. Te mostramos Paraguay.</p>
+          <p>Mundial Cambios tiene algo lindo que mostrar; una tierra de costumbres sencillas, como cantaba Mario Ortíz Mayans, que siempre agradan porque no tienen complicación, con paisajes que cubren de paz el alma y gente que trabaja con pasión para alcanzar sus sueños. Te mostramos Paraguay.</p>
         </div>
       </section>
       <section id="clima" class="clima">
@@ -320,43 +323,127 @@
               <h4>Casa Matriz</h4>
               <p>Avda. Curupyty c/ Adrián Jara. Edif.Globo P.B.</p>
               <p>Tel. +595 61 509570</p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-casaMatriz">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-casaMatriz" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-casaMatriz" class="modal-close"></div>
+                      <div id="casaMatriz" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="local">
               <h4>Sucursal Saltos</h4>
               <p>Avda. Paraguay c/ Bernardino Caballero.</p>
               <p>Tel. +595 46 263 030</p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-salto">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-salto" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-salto" class="modal-close"></div>
+                      <div id="salto" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="local">
               <h4>Sucursal Vendome</h4>
               <p>Avda. Itá Ybaté c/Adrián jara. Shopp. Vendome. Local 109</p>
               <p>Tel. +595 61 511 630</p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-vendome">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-vendome" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-vendome" class="modal-close"></div>
+                      <div id="vendome" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="local">
               <h4>Sucursal KM4 Super Carrereta</h4>
               <p>Sentido Pdte.Franco, a 100 mts. de la rotonda</p>
               <p>Tel. +595 61 571 070</p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-km4">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-km4" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-km4" class="modal-close"></div>
+                      <div id="km4" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="local">
               <h4>Sucursal Katueté</h4>
               <p>Ruta X De las Residentas.</p>
               <p>Tel. +595 471 234 187/8</p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-katuete">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-katuete" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-katuete" class="modal-close"></div>
+                      <div id="katuete" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="local">
               <h4>Sucursal Galeria Jebai Center</h4>
               <p>Avda. Adrian Jara</p>
               <p></p>
-              <p class="icon-compas"><a href="#">Ubicación</a></p>
+              <div class="ubicacion">
+                <div class="modal">
+                  <label for="modal-jebai">
+                    <div class="modal-trigger"> <i class="icon-compas"></i>Ubicación</div>
+                  </label>
+                  <input id="modal-jebai" type="checkbox" class="modal-state"/>
+                  <div class="modal-fade-screen"> 
+                    <div class="modal-inner"> 
+                      <div for="modal-jebai" class="modal-close"></div>
+                      <div id="jebai" class="mapa"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </article>
       </footer>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(window).load(function()
+      {$("#preload").fadeOut('');
+      });
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
     <script type="text/javascript" src="assets/js/xpanel.min.js"></script>
     <script type="text/javascript" src="assets/js/functions.min.js"></script>

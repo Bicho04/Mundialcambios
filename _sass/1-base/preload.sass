@@ -1,0 +1,43 @@
+.preload
+  background: #eee
+  height: 100vh
+  padding-top: 15%
+  position: fixed
+  text-align: center
+  top: 0
+  width: 100%
+  z-index: 999
+  img 
+    vertical-align: middle
+    display: inline-block
+    margin: 0 auto
+
+.loading
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  height: 100px
+  width: 100px
+  border-radius: 80px
+  border: 3px solid  transparentize($color-primary, 0.7)
+  margin: 1em
+  @include transform-origin(50% 50%)
+  @include animation(loading 3s linear infinite)
+
+  &:after
+    content: ""
+    position: absolute
+    top: -2.5px
+    left: 20px
+    width: 11px
+    height: 11px
+    border-radius: 10px
+    background-color: $color-primary
+
+@include keyframes(loading) 
+  from 
+    @include transform(rotate(0deg))
+  
+  to 
+    @include transform(rotate(360deg))
+    
