@@ -1,5 +1,5 @@
 @import "0-tools/fonts";
-@import "0-tools/font/font-awesome.scss";
+// @import "0-tools/font/font-awesome.scss";
 @import "0-tools/bourbon/bourbon";
 @import "0-tools/neat/neat";
 @import "0-tools/normalize";
@@ -9,7 +9,7 @@
 @import "1-base/base";
 @import "1-base/preload";
 
-// @import "2-modules/owl.carousel";
+@import "2-modules/owl.carousel";
 // @import "2-modules/responsive-nav";
 @import "2-modules/banderas";
 @import "2-modules/panel";
@@ -22,6 +22,7 @@
 @import "3-sections/section.clima";
 @import "3-sections/section.horarios";
 @import "3-sections/section.noticias";
+@import "3-sections/section.politica";
 @import "3-sections/footer";
 
 @import "4-layouts/home";

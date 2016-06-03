@@ -1,10 +1,32 @@
-section.mundialCambios .cuadro
-	padding: 10em auto 2em
+section.mundialCambios 
+	position: relative
+	.cuadro
+		padding: 10em auto 2em
+		// position: relative
 	p
 		color: #BE6403
 		font-size: 1.2em
 		line-height: 1.4em
 		max-width: 600px
+		position: relative
+		z-index: 2
 		margin-top: 20%	
 	img
 		display: none
+	figure.slides
+		height: 25em
+		margin: 0 auto
+		width: 100%
+		overflow: hidden
+		.slide
+			@include display(flex)
+			@include justify-content(space-between)
+			@include align-items(center)
+			p 
+				max-width: 50%
+				height: auto
+				margin: 0
+				padding-right: 2em
+				text-align: justify
+			img
+				max-width: 50%

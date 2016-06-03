@@ -1,4 +1,13 @@
 section.cambios#cambios
+	h1#sucursal Casa Matriz
+	section.sucursales
+		h4 
+			| Ver cotizacion en: 
+			a(href="#")  Casa Matriz | 
+			a(href="#") Agencia Vendome | 
+			a(href="#") Agencia Jebai | 
+			a(href="#") Avencia Km4 | 
+			a(href="#") Sucursal Salto del Guairá
 	.cuadro
 		section.cotiz.cambios-delDia
 			h2 Cambios Del dia
@@ -46,7 +55,7 @@ section.cambios#cambios
 					label Tengo
 					select
 						option(value="GuaPy" selected) Guarani
-						option(value="dolarUs") Dolar US
+						option(value="dolarUs") Dolar US"
 						option(value="real") Real
 						option(value="pesoAr") Peso Arg
 				.label
@@ -60,3 +69,24 @@ section.cambios#cambios
 						option(value="real") Real
 						option(value="pesoAr") Peso Arg
 				.boton: button convertir
+	section.newsletter#mc_embed_signup
+		form#mc-embedded-subscribe-form.validate(action='//google.us13.list-manage.com/subscribe/post?u=c46b1c2e06e65f6f649d3880d&id=46ed58addb', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='novalidate')
+			#mc_embed_signup_scroll
+				.cont-txt
+					h3 Newsletter
+					p Reciba las cotizaciones actualizadas diariemente en su correo
+				.mc-field-group
+					label(for='mce-EMAIL')
+					input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', aria-required='true', placeholder="Email")
+				.mc-field-group
+					label(for='mce-FNAME')
+					input#mce-FNAME(type='text', value='', name='FNAME',placeholder="Nombre")
+				#mce-responses.clear
+					#mce-error-response.response(style='display:none')
+					| &#x9;&#x9;
+					#mce-success-response.response(style='display:none')
+				// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+				div(style='position: absolute; left: -5000px;', aria-hidden='true')
+					input(type='text', name='b_c46b1c2e06e65f6f649d3880d_46ed58addb', tabindex='-1', value='')
+				.clear
+					input#mc-embedded-subscribe.button(type='submit', value='Enviar', name='subscribe')

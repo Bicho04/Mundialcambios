@@ -21,8 +21,8 @@ header.header
 
   figure.header-logo
     margin: 0 auto 0.5em
-    height: 4em
-    padding: 0
+    height: 4.5em
+    padding: 0.5em 0 0
     img
       height: 100%
     @include media($small-screen) 
@@ -54,6 +54,48 @@ header.header
         max-width: 100%
         margin: 0
       li 
+        position: relative
+        &:after
+          position: absolute
+          top: calc(100% + 10px)
+          min-width: 100%
+          padding:0.5em
+          background: #333
+          color: $color-claro
+          z-index: 10
+          display: none
+        &:before
+          display: none
+          position: absolute
+          content: ""
+          top: 100%
+          left: 50%
+          margin-left: -5px
+          border-top: 2px solid transparent
+          border-right: 5px solid transparent
+          border-bottom: 10px solid #333
+          border-left: 5px solid transparent
+          z-index: 11
+        &:nth-child(1):after
+          content: 'Inicio'
+        &:nth-child(2):after
+          content: 'Cambios'
+        &:nth-child(3):after
+          content: 'Nosotros'
+        &:nth-child(4):after
+          content: 'Clima'
+        &:nth-child(5):after
+          content: 'Horarios'
+        &:nth-child(6):after
+          content: 'Politítica de Prevención'
+        &:nth-child(7):after
+          content: 'Noticias'
+        &:nth-child(8):after
+          content: 'Contacto'
+        &:hover:after,
+        &:hover:before
+          display: block
+
         @include media($small-screen) 
           margin: 0 0.2em
         a 
@@ -74,4 +116,4 @@ header.header
             background-color: lighten($color-secundary,10)
             color: $color-primary
 
-    
+      

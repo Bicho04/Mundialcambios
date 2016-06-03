@@ -1,18 +1,71 @@
-
 $(function () {
-	$('#wrapper').waypoint('xpanel', {
-			shadow: false,
-			dim: false,
-			reverse:false,
-	});
+  $('#wrapper').waypoint('xpanel', {
+      shadow: false,
+      dim: false,
+      reverse:false
+  });
 
-	$('ul.menu li a').on('click',function(e){
-		e.preventDefault();
-		var strAncla=$(this).attr('href');
-		$('body,html').stop(true,true).animate({
-		scrollTop: $(strAncla).offset().top
-		},1000);
-	});
+  $('ul.menu li a').on('click',function(e){
+    e.preventDefault();
+    var strAncla=$(this).attr('href');
+    $('body,html').stop(true,true).animate({
+    scrollTop: $(strAncla).offset().top
+    },1000);
+  });
+
+
+  $(window).scroll(function(){
+    
+    var wScroll = $(this).scrollTop();
+
+    if (wScroll > $('section.mundialcambios').offset().top - $(window).height()){
+      var offset = (Math.min(0, wScroll - $('.mundialcambios').offset().top +$(window).height() - 350)).toFixed();
+      $('.cuadro').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});
+    }
+
+    if (wScroll > $('section.clima').offset().top - $(window).height()){
+      var offset = (Math.min(0, wScroll - $('.clima').offset().top +$(window).height() - 350)).toFixed();
+      $('.cuadro').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});
+    }
+
+    if (wScroll > $('section.horarios').offset().top - $(window).height()){
+      var offset = (Math.min(0, wScroll - $('.horarios').offset().top +$(window).height() - 350)).toFixed();
+      $('.cuadro').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});  
+    }
+
+    if (wScroll > $('section.noticias').offset().top - $(window).height()){
+      var offset = (Math.min(0, wScroll - $('.noticias').offset().top +$(window).height() - 350)).toFixed();
+      $('.cuadro').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});
+    }
+
+  });
+
+
+  $(".slides").owlCarousel({
+    loop:true,
+    center:true,
+    nav:false,
+    dots:false,
+    items:1,
+    autoplay:true,
+    autoplayHoverPause:true,
+    smartSpeed:300
+  });
+
+  $('#economia').FeedEk({
+    FeedUrl: 'http://www.ultimahora.com/rss/Economia.xml',
+    MaxCount: 5,
+    ShowDesc: false
+  });
+
+  $('#mundo').FeedEk({
+    FeedUrl: 'http://www.ultimahora.com/rss/Mundo.xml',
+    MaxCount: 5,
+    ShowDesc: false
+  });
+
+
+
 });
 
 
